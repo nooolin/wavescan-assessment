@@ -1,1 +1,0 @@
-# wavescan-assessment

@@ -97,6 +97,7 @@ const Form = (props) => {
   // Handle form submission
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(formData)
 
     // Setting error state variables to true if error is found
     if (formData.projectName.length < 4) {
@@ -167,11 +168,11 @@ const Form = (props) => {
               <MuiSelect
                 name='scanningMode'
                 value={formData.scanningMode}
-                onChange={(e) => handleInputChange(e.target.value)}
+                onChange={handleInputChange}
                 size='small'
               >
                 {modeList.map((mode) => (
-                  <MenuItem key={mode} value={mode}>
+                  <MenuItem name='scanningMode' key={mode} value={mode}>
                     {mode}
                   </MenuItem>
                 ))}
